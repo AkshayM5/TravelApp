@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/radius"
+        android:text="@string/radius"
+        android:layout_marginBottom="89dp"
+        android:layout_above="@+id/price"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:editable="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/price"
+        android:text="@string/price"
+        android:layout_marginBottom="172dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:editable="false"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price0"
+        android:layout_alignTop="@+id/price1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="setPriceRange0"
+        android:src="@drawable/dollarsigntrue"
+        android:cropToPadding="true"
+        android:padding="5dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price1"
+        android:layout_alignTop="@+id/price2"
+        android:layout_alignRight="@+id/radius"
+        android:layout_alignEnd="@+id/radius"
+        android:onClick="setPriceRange1"
+        android:src="@drawable/dollarsign"
+        android:cropToPadding="true"
+        android:padding="5dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price2"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_alignTop="@+id/price3"
+        android:layout_toRightOf="@+id/price1"
+        android:layout_toEndOf="@+id/price1"
+        android:onClick="setPriceRange2"
+        android:src="@drawable/dollarsign"
+        android:cropToPadding="true"
+        android:padding="5dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price3"
+        android:layout_alignTop="@+id/price4"
+        android:layout_toLeftOf="@+id/logo"
+        android:layout_toStartOf="@+id/logo"
+        android:onClick="setPriceRange3"
+        android:src="@drawable/dollarsign"
+        android:cropToPadding="true"
+        android:padding="5dp"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price4"
+        android:layout_marginTop="63dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_alignTop="@+id/price"
+        android:layout_toRightOf="@+id/price3"
+        android:layout_toEndOf="@+id/price3"
+        android:onClick="setPriceRange4"
+        android:src="@drawable/dollarsign"
+        android:cropToPadding="true"
+        android:padding="5dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Location"
+        android:id="@+id/changeLocation"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/logo"
+        android:onClick="changeLocation"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:id="@+id/FindARestaurant"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/price4"
+        android:layout_toEndOf="@+id/price4"
+        android:layout_marginBottom="26dp"
+        android:onClick="FindARestaurant"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radius_spinner"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+
+</RelativeLayout>
